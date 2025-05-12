@@ -1,4 +1,4 @@
-# Minha App - Lista de Usuários
+# ExemploMuiReact - Lista de Usuários
 
 Este projeto é uma aplicação React desenvolvida com Vite que exibe uma lista de usuários e seus detalhes, incluindo localização no mapa. A aplicação utiliza Material-UI para estilização e React Leaflet para exibição de mapas interativos.
 
