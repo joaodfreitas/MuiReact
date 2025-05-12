@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import UserCard from '../components/UserCard';
-import { Container, Typography, CircularProgress, Grid, Box, useTheme } from '@mui/material';
-import { getUsers } from '../api/users';
+import { Container, Typography, CircularProgress, Grid, Box } from '@mui/material';
 
 export default function Home() {
+    const users = [];
+    const loading = false;
+    const error = null;
+
 
 
     if (loading) {
@@ -21,14 +24,7 @@ export default function Home() {
 
     return (
         <Box sx={{ minWidth: '100vw', display: 'flex', flexDirection: 'column' }}>
-            <Box
-                sx={{
-                    background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
-                    color: theme.palette.primary.contrastText,
-                    py: 4,
-                    textAlign: 'center',
-                }}
-            >
+            <Box>
                 <Typography variant="h3" component="h1" fontWeight="bold">
                     Bem-vindo à Lista de Usuários
                 </Typography>
