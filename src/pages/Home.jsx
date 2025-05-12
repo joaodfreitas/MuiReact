@@ -4,25 +4,7 @@ import { Container, Typography, CircularProgress, Grid, Box, useTheme } from '@m
 import { getUsers } from '../api/users';
 
 export default function Home() {
-    const [users, setUsers] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const theme = useTheme(); // Hook para acessar o tema
 
-    useEffect(() => {
-        const fetchUsers = async () => {
-            try {
-                const response = await getUsers();
-                setUsers(response.data.results);
-                localStorage.setItem('users', JSON.stringify(response.data.results));
-                setLoading(false);
-            } catch (error) {
-                console.error("Erro ao carregar usuários", error);
-                setLoading(false);
-            }
-        };
-
-        fetchUsers();
-    }, []);
 
     if (loading) {
         return (

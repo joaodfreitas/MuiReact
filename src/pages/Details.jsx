@@ -14,29 +14,6 @@ L.Icon.Default.mergeOptions({
 });
 
 export default function Details() {
-    const { email } = useParams();
-    const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        const storedUsers = localStorage.getItem('users');
-        if (storedUsers) {
-            const users = JSON.parse(storedUsers);
-            const userDetails = users.find((user) => user.email === email);
-            if (userDetails) {
-                setUser(userDetails);
-                setLoading(false);
-            } else {
-                setError('Usuário não encontrado');
-                setLoading(false);
-            }
-        } else {
-            setError('Usuários não encontrados no cache');
-            setLoading(false);
-        }
-    }, [email]);
 
     if (loading) {
         return (
