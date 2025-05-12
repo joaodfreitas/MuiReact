@@ -1,12 +1,53 @@
-# React + Vite
+# Minha App - Lista de Usuários
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação React desenvolvida com Vite que exibe uma lista de usuários e seus detalhes, incluindo localização no mapa. A aplicação utiliza Material-UI para estilização e React Leaflet para exibição de mapas interativos.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Exibição de uma lista de usuários com informações básicas.
+- Detalhamento de cada usuário, incluindo:
+  - Nome completo.
+  - E-mail.
+  - Telefone.
+  - Localização (cidade e país).
+  - Mapa interativo com a localização do usuário.
+- Suporte a temas utilizando Material-UI.
+- Indicador de carregamento e tratamento de erros.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React**: Biblioteca para construção de interfaces de usuário.
+- **Vite**: Ferramenta de build rápida para desenvolvimento de aplicações modernas.
+- **Material-UI**: Biblioteca de componentes para estilização.
+- **React Leaflet**: Biblioteca para integração de mapas interativos.
+- **Leaflet**: Biblioteca para renderização de mapas.
+- **React Router**: Gerenciamento de rotas na aplicação.
+
+## Pré-requisitos
+
+Certifique-se de ter as seguintes ferramentas instaladas:
+
+- [Node.js](https://nodejs.org/) (versão 14 ou superior)
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
+
+## Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/ExemploMuiReact.git
+   cd ExemploMuiReact
+
+npm install
+# ou
+yarn install
+
+Estrutura do Projeto
+
+src/
+├── components/       # Componentes reutilizáveis
+├── pages/            # Páginas principais da aplicação
+│   ├── Home.jsx      # Página inicial com a lista de usuários
+│   ├── Details.jsx   # Página de detalhes do usuário
+├── api/              # Funções para chamadas à API
+├── App.jsx           # Componente principal
+├── main.jsx          # Ponto de entrada da aplicação
