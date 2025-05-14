@@ -1,13 +1,22 @@
 import { useEffect, useState } from 'react';
 import UserCard from '../components/UserCard';
 import { Container, Typography, CircularProgress, Grid, Box } from '@mui/material';
+import { getUsers } from '../api/users';
 
 export default function Home() {
-    const users = [];
-    const loading = false;
+    const [ users, setUsers]= useState([]);
+    const [loading, setLoading] = useState(true);
     const error = null;
 
+     useEffect(() => {
+    const execUsers = async () => {
+      const response = await getUsers();
+      setUsers(response.data.results);
+      setLoading(false);
+    };
 
+    execUsers();
+  }, []);
 
     if (loading) {
         return (
